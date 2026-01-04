@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Result Calculator</title>
+
+    <style>
+      body {
+        font-family: Arial;
+        background: #f1f3f5;
+        text-align: center;
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Result Calculator</h1>
+    <p>Check console for details</p>
+
+    <script>
+      // =====================
+      // VARIABLES
+      // =====================
+      var studentName = prompt("Enter student name");
+
+      var subject1 = Number(prompt("Enter marks for Math"));
+      var subject2 = Number(prompt("Enter marks for English"));
+      var subject3 = Number(prompt("Enter marks for Science"));
+
+      // =====================
+      // ARRAY (NO LOOP)
+      // =====================
+      var marks = [];
+      marks[0] = subject1;
+      marks[1] = subject2;
+      marks[2] = subject3;
+
+      // =====================
+      // OPERATORS
+      // =====================
+      var totalMarks = subject1 + subject2 + subject3;
+      var average = totalMarks / 3;
+
+      // =====================
+      // CONDITIONALS
+      // =====================
+      var grade;
+
+      if (average >= 80) {
+        grade = "A";
+      } else if (average >= 60) {
+        grade = "B";
+      } else if (average >= 40) {
+        grade = "C";
+      } else {
+        grade = "Fail";
+      }
+
+      // =====================
+      // OBJECT
+      // =====================
+      var report = {
+        name: studentName,
+        marks: marks,
+        total: totalMarks,
+        average: average,
+        grade: grade,
+      };
+
+      // =====================
+      // OUTPUT
+      // =====================
+      console.log("Student Report:", report);
+
+      alert(
+        "Student: " +
+          report.name +
+          "\nTotal: " +
+          report.total +
+          "\nAverage: " +
+          report.average +
+          "\nGrade: " +
+          report.grade
+      );
+    </script>
+  </body>
+</html>

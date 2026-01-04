@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bank Account Simulator</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f6f9;
+        text-align: center;
+        padding-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bank Account Simulator</h1>
+    <p>Check console for full account details</p>
+
+    <script>
+      // =====================
+      // VARIABLES
+      // =====================
+      var accountHolder = prompt("Enter account holder name");
+      var balance = Number(prompt("Enter initial balance"));
+
+      // =====================
+      // ARRAY (TRANSACTIONS)
+      // =====================
+      var transactions = [];
+
+      // =====================
+      // DEPOSIT & WITHDRAW (NO LOOPS)
+      // =====================
+      var depositAmount = Number(prompt("Enter deposit amount"));
+      balance = balance + depositAmount;
+
+      transactions[0] = {
+        type: "Deposit",
+        amount: depositAmount,
+      };
+
+      var withdrawAmount = Number(prompt("Enter withdrawal amount"));
+
+      // =====================
+      // CONDITIONAL CHECK
+      // =====================
+      if (withdrawAmount <= balance) {
+        balance = balance - withdrawAmount;
+
+        transactions[1] = {
+          type: "Withdraw",
+          amount: withdrawAmount,
+        };
+      } else {
+        transactions[1] = {
+          type: "Withdraw Failed",
+          amount: withdrawAmount,
+        };
+        alert("Insufficient balance!");
+      }
+
+      // =====================
+      // ACCOUNT OBJECT
+      // =====================
+      var account = {
+        holder: accountHolder,
+        finalBalance: balance,
+        history: transactions,
+      };
+
+      // =====================
+      // OUTPUT
+      // =====================
+      console.log("Account Details:", account);
+
+      alert(
+        "Account Holder: " +
+          account.holder +
+          "\nFinal Balance: Rs " +
+          account.finalBalance
+      );
+    </script>
+  </body>
+</html>

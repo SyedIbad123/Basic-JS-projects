@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daily Expense Summary</title>
+
+    <style>
+      body {
+        font-family: Tahoma;
+        background: #eef2f7;
+        text-align: center;
+        padding-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Daily Expense Summary</h1>
+    <p>Console-based beginner project</p>
+
+    <script>
+      // =====================
+      // VARIABLES
+      // =====================
+      var userName = prompt("Enter your name");
+
+      var foodExpense = Number(prompt("Enter food expense"));
+      var travelExpense = Number(prompt("Enter travel expense"));
+      var shoppingExpense = Number(prompt("Enter shopping expense"));
+
+      // =====================
+      // ARRAY (NO LOOP)
+      // =====================
+      var expenses = [];
+
+      expenses[0] = {
+        category: "Food",
+        amount: foodExpense,
+      };
+
+      expenses[1] = {
+        category: "Travel",
+        amount: travelExpense,
+      };
+
+      expenses[2] = {
+        category: "Shopping",
+        amount: shoppingExpense,
+      };
+
+      // =====================
+      // OPERATORS
+      // =====================
+      var totalExpense = foodExpense + travelExpense + shoppingExpense;
+
+      // =====================
+      // CONDITIONALS
+      // =====================
+      var spendingLevel;
+
+      if (totalExpense > 5000) {
+        spendingLevel = "High Spending";
+      } else if (totalExpense > 2000) {
+        spendingLevel = "Moderate Spending";
+      } else {
+        spendingLevel = "Low Spending";
+      }
+
+      // =====================
+      // OBJECT
+      // =====================
+      var summary = {
+        name: userName,
+        total: totalExpense,
+        level: spendingLevel,
+        details: expenses,
+      };
+
+      // =====================
+      // OUTPUT
+      // =====================
+      console.log("Expense Summary:", summary);
+
+      alert(
+        "User: " +
+          summary.name +
+          "\nTotal Expense: Rs " +
+          summary.total +
+          "\nSpending Level: " +
+          summary.level
+      );
+    </script>
+  </body>
+</html>
