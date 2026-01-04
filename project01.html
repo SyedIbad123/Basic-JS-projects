@@ -18,18 +18,18 @@
 
     <script>
       // =====================
-      // VARIABLES
+      // letIABLES
       // =====================
-      var studentName = prompt("Enter student name");
+      let studentName = prompt("Enter student name");
 
-      var subject1 = Number(prompt("Enter marks for Math"));
-      var subject2 = Number(prompt("Enter marks for English"));
-      var subject3 = Number(prompt("Enter marks for Science"));
+      let subject1 = Number(prompt("Enter marks for Math"));
+      let subject2 = Number(prompt("Enter marks for English"));
+      let subject3 = Number(prompt("Enter marks for Science"));
 
       // =====================
       // ARRAY (NO LOOP)
       // =====================
-      var marks = [];
+      const marks = [];
       marks[0] = subject1;
       marks[1] = subject2;
       marks[2] = subject3;
@@ -37,13 +37,13 @@
       // =====================
       // OPERATORS
       // =====================
-      var totalMarks = subject1 + subject2 + subject3;
-      var average = totalMarks / 3;
+      let totalMarks = subject1 + subject2 + subject3;
+      let average = totalMarks / 3;
 
       // =====================
       // CONDITIONALS
       // =====================
-      var grade;
+      let grade;
 
       if (average >= 80) {
         grade = "A";
@@ -58,7 +58,7 @@
       // =====================
       // OBJECT
       // =====================
-      var report = {
+      const report = {
         name: studentName,
         marks: marks,
         total: totalMarks,

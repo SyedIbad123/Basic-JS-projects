@@ -18,18 +18,18 @@
 
     <script>
       // =====================
-      // VARIABLES
+      // let IABLES
       // =====================
-      var userName = prompt("Enter your name");
+      let userName = prompt("Enter your name");
 
-      var foodExpense = Number(prompt("Enter food expense"));
-      var travelExpense = Number(prompt("Enter travel expense"));
-      var shoppingExpense = Number(prompt("Enter shopping expense"));
+      let foodExpense = Number(prompt("Enter food expense"));
+      let travelExpense = Number(prompt("Enter travel expense"));
+      let shoppingExpense = Number(prompt("Enter shopping expense"));
 
       // =====================
       // ARRAY (NO LOOP)
       // =====================
-      var expenses = [];
+      const expenses = [];
 
       expenses[0] = {
         category: "Food",
@@ -49,12 +49,12 @@
       // =====================
       // OPERATORS
       // =====================
-      var totalExpense = foodExpense + travelExpense + shoppingExpense;
+      let totalExpense = foodExpense + travelExpense + shoppingExpense;
 
       // =====================
       // CONDITIONALS
       // =====================
-      var spendingLevel;
+      let spendingLevel;
 
       if (totalExpense > 5000) {
         spendingLevel = "High Spending";
@@ -67,7 +67,7 @@
       // =====================
       // OBJECT
       // =====================
-      var summary = {
+      const summary = {
         name: userName,
         total: totalExpense,
         level: spendingLevel,

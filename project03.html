@@ -18,20 +18,20 @@
 
     <script>
       // =====================
-      // VARIABLES
+      // letIABLES
       // =====================
-      var accountHolder = prompt("Enter account holder name");
-      var balance = Number(prompt("Enter initial balance"));
+      let accountHolder = prompt("Enter account holder name");
+      let balance = Number(prompt("Enter initial balance"));
 
       // =====================
       // ARRAY (TRANSACTIONS)
       // =====================
-      var transactions = [];
+      const transactions = [];
 
       // =====================
       // DEPOSIT & WITHDRAW (NO LOOPS)
       // =====================
-      var depositAmount = Number(prompt("Enter deposit amount"));
+      let depositAmount = Number(prompt("Enter deposit amount"));
       balance = balance + depositAmount;
 
       transactions[0] = {
@@ -39,7 +39,7 @@
         amount: depositAmount,
       };
 
-      var withdrawAmount = Number(prompt("Enter withdrawal amount"));
+      let withdrawAmount = Number(prompt("Enter withdrawal amount"));
 
       // =====================
       // CONDITIONAL CHECK
@@ -62,7 +62,7 @@
       // =====================
       // ACCOUNT OBJECT
       // =====================
-      var account = {
+      const account = {
         holder: accountHolder,
         finalBalance: balance,
         history: transactions,
